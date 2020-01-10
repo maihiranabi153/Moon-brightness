@@ -1,0 +1,29 @@
+{
+  "main": "dist/index.js",
+  "scripts": {
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "build": "tsc",
+    "tsc:test": "./node_modules/.bin/mocha -r ts-node/register src/**/*.spec.ts",
+    "prestart": "npm run build",
+    "start": "node .",
+    "test": "./node_modules/.bin/mocha"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "mocha": "^6.2.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.7",
+    "@types/express": "^4.17.2",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^13.1.0",
+    "ts-node": "^8.5.4",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.4",
+    "typings": "^2.1.1"
+  }
+}
